@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <!-- Row 1 -->
+    <div class="grid">
+
+        <div class="card">
+            <h3>🔋 Battery Status</h3>
+            <h1 id="battery">82%</h1>
+            <p>Healthy</p>
+        </div>
+
+        <div class="card">
+            <h3>☀ Solar Power</h3>
+            <h1 id="solar">520 W</h1>
+            <p>Generating</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Charging Power</h3>
+            <h1 id="power">2.4 kW</h1>
+            <p>Charging Active</p>
+        </div>
+
+        <div class="card">
+            <h3>💰 Charging Cost</h3>
+            <h1 id="cost">₹42.50</h1>
+            <p>Current Session</p>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- Row 2 -->
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>🚗 Vehicle Information</h3>
+
+            <hr><br>
+
+            <p><b>Vehicle :</b> Ola S1 Pro</p>
+
+            <p><b>Battery :</b> 82%</p>
+
+            <p><b>Estimated Time :</b> 18 min</p>
+
+            <p><b>Charging Mode :</b> Smart AI</p>
+
+            <p><b>Connector :</b> Connected</p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📈 Today's Statistics</h3>
+
+            <hr><br>
+
+            <p>Energy Delivered : 12.4 kWh</p>
+
+            <p>Solar Used : 9.8 kWh</p>
+
+            <p>Grid Used : 2.6 kWh</p>
+
+            <p>CO₂ Saved : 8.2 kg</p>
+
+            <p>Revenue : ₹368</p>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- Alerts -->
+
+    <div class="card">
+
+        <h3>🔔 Smart Alerts</h3>
+
+        <hr><br>
+
+        <p>✅ AI recommends Eco Charging.</p>
+
+        <p>☀ Solar efficiency is excellent.</p>
+
+        <p>📷 CCTV Connected.</p>
+
+        <p>🌐 Firebase Online.</p>
+
+        <p>🔋 Battery Health : Excellent (96%).</p>
+
+    </div>
+
+</div>
+
+{% endblock %}

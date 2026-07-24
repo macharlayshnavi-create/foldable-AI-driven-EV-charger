@@ -1,0 +1,1302 @@
+/* ===========================
+   FoldCharge AI
+   Main Style Sheet
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background:#07121e;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ================= Loader ================= */
+
+#loader{
+
+    position:fixed;
+    width:100%;
+    height:100vh;
+
+    background:#07121e;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-content h1{
+
+    font-size:55px;
+
+    color:#00ff88;
+
+    margin-bottom:15px;
+
+}
+
+.loader-content p{
+
+    color:#bbb;
+
+    margin-bottom:35px;
+
+}
+
+.loading-bar{
+
+    width:420px;
+
+    height:10px;
+
+    background:#1d2d3c;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.loading-progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#00ff88,#00cfff);
+
+    animation:loading 3s forwards;
+
+}
+
+@keyframes loading{
+
+0%{
+width:0%;
+}
+
+100%{
+width:100%;
+}
+
+}
+
+/* ================= App ================= */
+
+#app{
+    display:flex;
+    width:100%;
+    height:calc(100vh - 40px);
+}
+/* ================= Sidebar ================= */
+
+.sidebar{
+
+    width:270px;
+
+    background:#111d2c;
+
+    border-right:2px solid #00ff88;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    color:#00ff88;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.sidebar ul{
+
+    list-style:none;
+
+    padding:15px;
+
+}
+
+.sidebar li{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:16px;
+
+    margin-bottom:8px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.sidebar li:hover{
+
+    background:#00ff88;
+
+    color:#07121e;
+
+    transform:translateX(6px);
+
+}
+
+.sidebar li.active{
+
+    background:#00ff88;
+
+    color:#07121e;
+
+}
+
+.sidebar i{
+
+    width:35px;
+
+    font-size:20px;
+
+}
+
+.sidebar span{
+
+    font-size:18px;
+
+}
+
+/* ================= Main ================= */
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* ================= Topbar ================= */
+
+.topbar{
+    width:100%;
+    height:80px;
+    flex-shrink:0;
+}
+
+.topbar h2{
+
+    font-size:30px;
+
+    color:#00ff88;
+
+}
+
+.topbar p{
+
+    color:#aaa;
+
+}
+
+.profile{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#1a2c40;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:#00ff88;
+
+}
+
+/* ================= Content ================= */
+
+#content{
+    flex:1;
+    overflow-y:auto;
+    padding:25px;
+}
+/* ================= Cards ================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 30px rgba(0,255,136,.35);
+
+}
+
+/* ================= Buttons ================= */
+
+button{
+
+    background:#00ff88;
+
+    color:#07121e;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* ================= Scroll ================= */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00ff88;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#08121f;
+
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:1000px){
+
+.sidebar{
+
+    width:90px;
+
+}
+
+.sidebar span{
+
+    display:none;
+
+}
+
+.logo{
+
+    font-size:22px;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.sidebar{
+
+    display:none;
+
+}
+
+.topbar{
+
+    padding:15px;
+
+}
+
+}
+.dashboard{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.middle{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:20px;
+
+}
+
+.left-panel{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.right-panel{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.card h1{
+
+font-size:42px;
+
+margin:15px 0;
+
+color:#00ff88;
+
+}
+
+.card p{
+
+margin:10px 0;
+
+}
+
+progress{
+
+width:100%;
+
+height:28px;
+
+}
+
+progress::-webkit-progress-value{
+
+background:#00ff88;
+
+border-radius:20px;
+
+}
+
+progress::-webkit-progress-bar{
+
+background:#203040;
+
+border-radius:20px;
+
+}
+
+@media(max-width:1200px){
+
+.cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.middle{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.vehicle-page{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.vehicle-card{
+
+display:flex;
+
+gap:40px;
+
+background:#122033;
+
+padding:35px;
+
+border-radius:20px;
+
+width:100%;
+
+box-shadow:0 0 25px rgba(0,255,136,.2);
+
+}
+
+.bike{
+
+width:350px;
+
+animation:bikeFloat 3s infinite;
+
+}
+
+.vehicle-info{
+
+flex:1;
+
+}
+
+.vehicle-info h2{
+
+color:#00ff88;
+
+margin-bottom:15px;
+
+}
+
+.vehicle-info p{
+
+margin:14px 0;
+
+font-size:18px;
+
+}
+
+.vehicle-info button{
+
+margin-right:15px;
+
+margin-top:20px;
+
+}
+
+@keyframes bikeFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+.charging-page{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+.charge-left{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.battery-circle{
+
+width:300px;
+
+height:300px;
+
+border-radius:50%;
+
+background:conic-gradient(#00ff88 0deg,#00ff88 295deg,#1c2e40 295deg);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+animation:rotateBattery 5s linear infinite;
+
+}
+
+.inner-circle{
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+background:#08121f;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.inner-circle h1{
+
+font-size:60px;
+
+color:#00ff88;
+
+}
+
+.charge-buttons{
+
+margin-top:30px;
+
+display:flex;
+
+gap:20px;
+
+}
+
+.charge-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.energy-flow{
+
+font-size:30px;
+
+text-align:center;
+
+animation:flow 2s infinite;
+
+}
+
+@keyframes flow{
+
+0%{
+
+transform:translateX(-10px);
+
+}
+
+50%{
+
+transform:translateX(10px);
+
+}
+
+100%{
+
+transform:translateX(-10px);
+
+}
+
+}
+
+@keyframes rotateBattery{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@media(max-width:1000px){
+
+.charging-page{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= PAYMENT PAGE ================= */
+
+.payment-page{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:30px;
+
+}
+
+.payment-left{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.payment-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.payment-buttons{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+}
+
+.payment-buttons button{
+
+height:60px;
+
+font-size:18px;
+
+}
+
+.qr{
+
+width:220px;
+
+display:block;
+
+margin:auto;
+
+animation:qr 2s infinite;
+
+}
+
+@keyframes qr{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.05);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+@media(max-width:1000px){
+
+.payment-page{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= ANALYTICS ================= */
+
+.analytics-page{
+
+display:flex;
+
+flex-direction:column;
+
+gap:25px;
+
+}
+
+.top-cards{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:20px;
+
+}
+
+.graph-card{
+
+background:#122033;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 0 25px rgba(0,255,136,.2);
+
+}
+
+.graph-card canvas{
+
+height:350px!important;
+
+}
+
+@media(max-width:1100px){
+
+.top-cards{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.top-cards{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= AI PAGE ================= */
+
+.ai-page{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:25px;
+
+}
+
+.chat-box{
+
+height:450px;
+
+background:#08121f;
+
+padding:20px;
+
+overflow:auto;
+
+border-radius:15px;
+
+margin-top:20px;
+
+}
+
+.bot{
+
+background:#203040;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border-radius:15px;
+
+width:75%;
+
+}
+
+.user{
+
+background:#00ff88;
+
+color:#08121f;
+
+padding:15px;
+
+margin-bottom:15px;
+
+border-radius:15px;
+
+margin-left:auto;
+
+width:75%;
+
+}
+
+.chat-input{
+
+display:flex;
+
+margin-top:20px;
+
+gap:15px;
+
+}
+
+.chat-input input{
+
+flex:1;
+
+padding:15px;
+
+font-size:16px;
+
+border:none;
+
+outline:none;
+
+border-radius:10px;
+
+}
+
+.ai-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+@media(max-width:1000px){
+
+.ai-page{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* CAMERA */
+
+.camera-page{
+
+display:grid;
+
+grid-template-columns:2fr 1fr;
+
+gap:25px;
+
+}
+
+#camera{
+
+width:100%;
+
+height:420px;
+
+border-radius:15px;
+
+background:black;
+
+}
+
+.camera-buttons{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+#canvas{
+
+width:100%;
+
+border-radius:15px;
+
+background:#08121f;
+
+border:2px solid #00ff88;
+
+}
+
+.camera-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+@media(max-width:1000px){
+
+.camera-page{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= SOLAR PAGE ================= */
+
+.solar-page{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+}
+
+.solar-left{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.solar-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.sun-animation{
+
+font-size:120px;
+
+text-align:center;
+
+animation:rotateSun 10s linear infinite;
+
+margin:20px 0;
+
+}
+
+@keyframes rotateSun{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+@media(max-width:1000px){
+
+.solar-page{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ================= BATTERY PAGE ================= */
+
+.battery-page{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:25px;
+
+}
+
+.battery-left,
+.battery-right{
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+}
+
+.battery-pack{
+
+width:180px;
+
+height:320px;
+
+margin:auto;
+
+border:5px solid #00ff88;
+
+border-radius:20px;
+
+position:relative;
+
+overflow:hidden;
+
+background:#1b2d40;
+
+}
+
+.battery-pack::before{
+
+content:"";
+
+position:absolute;
+
+top:-18px;
+
+left:60px;
+
+width:60px;
+
+height:18px;
+
+background:#00ff88;
+
+border-radius:8px 8px 0 0;
+
+}
+
+.battery-level{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+height:82%;
+
+background:linear-gradient(#00ff88,#00cc66);
+
+transition:.5s;
+
+}
+
+.cells{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:15px;
+
+}
+
+.cell{
+
+height:60px;
+
+border-radius:10px;
+
+background:#203040;
+
+}
+
+.cell.active{
+
+background:#00ff88;
+
+box-shadow:0 0 15px #00ff88;
+
+}
+
+@media(max-width:1000px){
+
+.battery-page{
+
+grid-template-columns:1fr;
+
+}
+
+}
+/* ===========================
+   TOP SCROLL HEADER
+=========================== */
+
+.top-scroll{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:40px;
+
+    background:linear-gradient(90deg,#00ff88,#00cfff);
+
+    color:#07121e;
+
+    font-weight:700;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    z-index:10000;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.scroll-text{
+
+    display:inline-block;
+
+    padding-left:100%;
+
+    animation:scrollText 18s linear infinite;
+
+    font-size:17px;
+
+}
+
+@keyframes scrollText{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(-100%);
+
+    }
+
+}
+
+/* Move content below the scrolling header */
+
+#loader{
+
+    margin-top:40px;
+
+}
+
+#app{
+
+    margin-top:40px;
+
+    height:calc(100vh - 40px);
+
+}
