@@ -1300,3 +1300,125 @@ grid-template-columns:1fr;
     height:calc(100vh - 40px);
 
 }
+/* ===========================
+   Responsive Mobile Design
+=========================== */
+
+@media (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+.sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:250px;
+    height:100%;
+    z-index:1000;
+    transition:.4s;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.main{
+    margin-left:0;
+    width:100%;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.graph-section,
+.camera-section{
+    width:100%;
+}
+
+img,
+video,
+canvas{
+    width:100%;
+    height:auto;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+.topbar h2{
+    font-size:22px;
+}
+
+.top-scroll{
+    font-size:13px;
+}
+
+}
+/* ===========================
+   Responsive Mobile Design
+=========================== */
+
+@media (max-width:768px){
+
+body{
+    overflow-x:hidden;
+}
+
+.sidebar{
+    position:fixed;
+    left:-260px;
+    top:0;
+    width:250px;
+    height:100%;
+    z-index:1000;
+    transition:.4s;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.main{
+    margin-left:0;
+    width:100%;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.graph-section,
+.camera-section{
+    width:100%;
+}
+
+img,
+video,
+canvas{
+    width:100%;
+    height:auto;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+.topbar h2{
+    font-size:22px;
+}
+
+.top-scroll{
+    font-size:13px;
+}
+
+}

@@ -1326,3 +1326,9 @@ Math.floor(Math.random()*2+1)+"h "+Math.floor(Math.random()*59)+"m";
 },3000);
 
 }
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.querySelector(".sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+});
