@@ -1337,3 +1337,28 @@ canvas{
 }
 
 /* ---------- Tablet ---------- */
+/* ===== Universal Responsive Scale ===== */
+
+html,body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:auto;
+}
+
+#app{
+    width:1920px;
+    min-height:1080px;
+    transform-origin:top left;
+}
+
+@media (max-width:1920px){
+    #app{
+        transform:scale(calc(100vw / 1920));
+    }
+
+    body{
+        height:calc(1080px * (100vw / 1920));
+    }
+}
