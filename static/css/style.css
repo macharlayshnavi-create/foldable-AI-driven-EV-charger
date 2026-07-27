@@ -1353,23 +1353,42 @@ html,body{
     transform-origin:top left;
 }
 
-/* Large Desktop */
-@media (min-width:1500px){}
+/* 4K Monitor */
+@media screen and (min-width:2560px){
 
-/* Desktop */
-@media (max-width:1400px){}
+}
 
-/* Laptop */
-@media (max-width:1000px){}
+/* Full HD Desktop */
+@media screen and (min-width:1920px) and (max-width:2559px){
 
-/* Small Laptop */
-@media (max-width:100px){}
+}
 
-/* Tablet */
-@media (max-width:1024px){}
+/* Large Laptop */
+@media screen and (min-width:1440px) and (max-width:1919px){
 
-/* Mobile */
-@media (max-width:700px){}
+}
 
-/* Small Mobile */
-@media (max-width:400px){}
+/* Standard Laptop */
+@media screen and (min-width:1366px) and (max-width:1439px){
+
+}
+
+/* Tablet Landscape */
+@media screen and (min-width:1024px) and (max-width:1365px){
+
+}
+
+/* Tablet Portrait */
+@media screen and (min-width:768px) and (max-width:1023px){
+
+}
+
+/* Large Mobile */
+@media screen and (min-width:481px) and (max-width:767px){
+
+}
+
+/* Standard Mobile */
+@media screen and (max-width:480px){
+
+}
