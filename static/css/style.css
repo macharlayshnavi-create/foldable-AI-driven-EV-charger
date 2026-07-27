@@ -113,17 +113,8 @@ width:100%;
 /* ================= Sidebar ================= */
 
 .sidebar{
-
-    width:270px;
-
-    background:#111d2c;
-
-    border-right:2px solid #00ff88;
-
-    display:flex;
-
-    flex-direction:column;
-
+    width:280px;
+    flex-shrink:0;
 }
 
 .logo{
@@ -260,16 +251,15 @@ width:100%;
 /* ================= Content ================= */
 
 #content{
-    flex:1;
-    overflow-y:auto;
-    padding:25px;
+    width:100%;
+    max-width:100%;
 }
 /* ================= Cards ================= */
-
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
+    width:100%;
 }
 
 .card:hover{
@@ -570,6 +560,12 @@ transform:translateY(0);
 
 }
 
+}
+.middle{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    width:100%;
 }
 .charging-page{
 
@@ -1294,11 +1290,15 @@ grid-template-columns:1fr;
 }
 
 #app{
+    display:flex;
+    width:100%;
+    min-height:100vh;
+}
 
-    margin-top:40px;
-
-    height:calc(100vh - 40px);
-
+#content{
+    width:100%;
+    display:grid;
+    grid-template-columns:1fr;
 }
 /* ======================================
    Responsive Layout (Laptop + Tablet + Mobile)
@@ -1332,63 +1332,164 @@ canvas{
 
 .main{
     flex:1;
-    width:calc(100% - 270px);
-    overflow-x:hidden;
+    width:100%;
+    min-width:0;
+    padding:20px;
+    box-sizing:border-box;
+    overflow-x:auto;
 }
 
 /* ---------- Tablet ---------- */
 /* ===== Universal Responsive Scale ===== */
 
-html,body{
+/* ===== Universal Responsive Layout ===== */
+
+html,
+body{
+    width:100%;
+    min-height:100%;
     margin:0;
     padding:0;
-    width:1000%;
-    height:1000%;
-    overflow:auto;
+    overflow-x:hidden;
+    background:#07121e;
 }
 
 #app{
-    width:1000px;
-    min-height:999px;
-    transform-origin:top left;
+    display:flex;
+    width:100%;
+    min-height:calc(100vh - 40px);
 }
 
+.sidebar{
+    width:280px;
+    min-width:280px;
+}
+
+.main{
+    flex:1;
+    width:100%;
+    min-width:0;
+    padding:25px;
+    overflow-y:auto;
+}
+
+#content{
+    width:100%;
+}
+
+.dashboard{
+    width:100%;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    width:100%;
+}
+
+.middle{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(420px,1fr));
+    gap:20px;
+    width:100%;
+}
 /* 4K Monitor */
-@media screen and (min-width:2560px){
+/* Laptop */
+@media(max-width:1366px){
+
+.sidebar{
+    width:240px;
+    min-width:240px;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.middle{
+    grid-template-columns:1fr;
+}
 
 }
 
-/* Full HD Desktop */
-@media screen and (min-width:1920px) and (max-width:2559px){
+/* Tablet */
+@media(max-width:992px){
+
+.sidebar{
+    width:210px;
+    min-width:210px;
+}
+
+.cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.top-cards{
+    grid-template-columns:repeat(2,1fr);
+}
 
 }
 
-/* Large Laptop */
-@media screen and (min-width:1440px) and (max-width:1919px){
+/* Mobile */
+@media(max-width:768px){
+
+#app{
+    flex-direction:column;
+}
+
+.sidebar{
+    width:100%;
+    min-width:100%;
+    height:auto;
+}
+
+.sidebar ul{
+    display:flex;
+    overflow-x:auto;
+    gap:10px;
+    padding:10px;
+}
+
+.sidebar li{
+    min-width:140px;
+    justify-content:center;
+}
+
+.main{
+    padding:15px;
+}
+
+.cards,
+.middle,
+.top-cards,
+.vehicle-card,
+.payment-page,
+.analytics-page,
+.ai-page,
+.camera-page,
+.solar-page,
+.battery-page,
+.charging-page{
+    display:grid;
+    grid-template-columns:1fr;
+}
 
 }
 
-/* Standard Laptop */
-@media screen and (min-width:1366px) and (max-width:1439px){
+/* Small Phones */
+@media(max-width:480px){
 
+.logo{
+    font-size:22px;
 }
 
-/* Tablet Landscape */
-@media screen and (min-width:1024px) and (max-width:1365px){
-
+.card h1{
+    font-size:34px;
 }
 
-/* Tablet Portrait */
-@media screen and (min-width:768px) and (max-width:1023px){
-
+.topbar h2{
+    font-size:30px;
 }
-
-/* Large Mobile */
-@media screen and (min-width:481px) and (max-width:767px){
-
-}
-
-/* Standard Mobile */
-@media screen and (max-width:480px){
 
 }
