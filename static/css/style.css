@@ -1353,17 +1353,23 @@ html,body{
     transform-origin:top left;
 }
 
+/* Large Desktop */
+@media (min-width:1921px){}
+
 /* Desktop */
-@media (min-width:1367px){ }
+@media (max-width:1920px){}
 
 /* Laptop */
-@media (max-width:1366px){ }
+@media (max-width:1440px){}
+
+/* Small Laptop */
+@media (max-width:1366px){}
 
 /* Tablet */
-@media (max-width:1024px){ }
+@media (max-width:1024px){}
 
 /* Mobile */
-@media (max-width:768px){ }
+@media (max-width:768px){}
 
 /* Small Mobile */
-@media (max-width:480px){ }
+@media (max-width:480px){}
