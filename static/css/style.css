@@ -1348,17 +1348,22 @@ html,body{
 }
 
 #app{
-    width:1920px;
-    min-height:1080px;
+    width:1000px;
+    min-height:999px;
     transform-origin:top left;
 }
 
-@media (max-width:1920px){
-    #app{
-        transform:scale(calc(100vw / 1920));
-    }
+/* Desktop */
+@media (min-width:1367px){ }
 
-    body{
-        height:calc(1080px * (100vw / 1920));
-    }
-}
+/* Laptop */
+@media (max-width:1366px){ }
+
+/* Tablet */
+@media (max-width:1024px){ }
+
+/* Mobile */
+@media (max-width:768px){ }
+
+/* Small Mobile */
+@media (max-width:480px){ }
