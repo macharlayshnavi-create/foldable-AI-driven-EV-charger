@@ -1360,10 +1360,10 @@ html,body{
 @media (max-width:1920px){}
 
 /* Laptop */
-@media (max-width:1440px){}
+@media (max-width:1100px){}
 
 /* Small Laptop */
-@media (max-width:1300px){}
+@media (max-width:100px){}
 
 /* Tablet */
 @media (max-width:1024px){}
